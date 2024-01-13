@@ -9,9 +9,9 @@ import './styles/tailwind.css';
 
 function App() {
   return (
-    <div className='flex flex-col justify-between overflow-y-auto min-w-screen min-h-screen'>
+    <div className='flex flex-col justify-between min-w-screen min-h-screen scrollbar-hide'>
       <Header />
-      <div className="">
+      <div className="min-w-screen min-h-screen mx-20">
         <Routes>
           <Route path="/" element={ <Home /> }/>
         </Routes>

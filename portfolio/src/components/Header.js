@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import { Link as ScrollLink } from 'react-scroll';
+import Logo from "./images/favicon.png";
+
 import { MdMenu } from "react-icons/md";
-import Logo from "./favicon.png"
+import { IoCloseSharp } from "react-icons/io5";
 
 const Header = () => {
     const [ menuVisible, setMenuVisible ] = useState(false);
@@ -33,18 +36,17 @@ const Header = () => {
         setMenuVisible(!menuVisible);
     }
 
-    const handleMouseEnter = () => {
-        setMenuVisible(true);
-    }
-
     const handleMouseLeave = () => {
         setMenuVisible(false);
     }
 
     return (
-        <nav>
-            <div className="flex items-start justify-between px-8 py-6 sm:px-10 sm:py-8 sticky top-0">
-                <div className='flex flex-1 gap-2 items-center justify-left'>
+        <nav className="sticky top-0 bg-white z-10">
+            <div className="flex items-start justify-between px-8 py-6 sm:px-10 sm:py-8 cursor-pointer">
+                <ScrollLink 
+                    className='flex flex-1 gap-2 items-center justify-left'
+                    to='Home' smooth={ true } duration={ 800 } offset={ -100 }  
+                >
                     <img 
                         className="flex-0 w-8 h-8"
                         src={Logo} alt="Logo"    
@@ -53,15 +55,18 @@ const Header = () => {
                     <h1 className="text-3xl font-semibold font-sans tracking-wide">
                         Kurt Pagal
                     </h1>
-                </div>
+                </ScrollLink>
 
                 { windowSize.width < 1025 ? (
                     <div className="flex flex-col gap-4 items-end"
-                        onMouseEnter={ handleMouseEnter }
                         onMouseLeave={ handleMouseLeave }
                     >
-                        <button className="text-4xl hover:text-grey-500" onClick={ toggleMenu }>
-                            <MdMenu />
+                        <button className="text-4xl hover:text-grey-500 hover:animate-bounce" onClick={ toggleMenu }>
+                            { menuVisible ? (
+                                <IoCloseSharp />
+                            ) : (
+                                <MdMenu />
+                            )}
                         </button>
                         
                         { menuVisible && (
