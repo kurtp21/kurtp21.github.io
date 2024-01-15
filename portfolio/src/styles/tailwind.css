@@ -2,7 +2,7 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-/* Hide scrollbar for Chrome, Safari and Opera */
+Hide scrollbar for Chrome, Safari and Opera
 .no-scrollbar::-webkit-scrollbar {
     display: none;
 }

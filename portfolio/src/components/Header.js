@@ -1,36 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Link as ScrollLink } from 'react-scroll';
-import Logo from "./images/favicon.png";
+
+import Logo from "./resources/favicon.png";
 
 import { MdMenu } from "react-icons/md";
 import { IoCloseSharp } from "react-icons/io5";
 
-const Header = () => {
+const Header = ({ width }) => {
     const [ menuVisible, setMenuVisible ] = useState(false);
-
-    const [windowSize, setWindowSize] = useState({
-        width: window.innerWidth,
-        height: window.innerHeight,
-    });
-    
-    const updateWindowSize = () => {
-        setWindowSize({
-            width: window.innerWidth,
-            height: window.innerHeight,
-        });
-    };
-
-    useEffect(() => {
-        // Add event listener when the component mounts
-        window.addEventListener('resize', updateWindowSize);
-        console.log(windowSize.width, windowSize.height);
-
-        // Remove event listener when the component unmounts
-        return () => {
-            window.removeEventListener('resize', updateWindowSize);
-        };
-
-    }, []); 
 
     const toggleMenu = () => {
         setMenuVisible(!menuVisible);
@@ -42,9 +19,9 @@ const Header = () => {
 
     return (
         <nav className="sticky top-0 bg-white z-10">
-            <div className="flex items-start justify-between px-8 py-6 sm:px-10 sm:py-8 cursor-pointer">
+            <div className="flex items-start justify-between px-8 py-6 sm:px-10 sm:py-8">
                 <ScrollLink 
-                    className='flex flex-1 gap-2 items-center justify-left'
+                    className='flex gap-2 items-center justify-left cursor-pointer'
                     to='Home' smooth={ true } duration={ 800 } offset={ -100 }  
                 >
                     <img 
@@ -57,7 +34,7 @@ const Header = () => {
                     </h1>
                 </ScrollLink>
 
-                { windowSize.width < 1025 ? (
+                { width < 1025 ? (
                     <div className="flex flex-col gap-4 items-end"
                         onMouseLeave={ handleMouseLeave }
                     >
@@ -71,29 +48,51 @@ const Header = () => {
                         
                         { menuVisible && (
                             <div className="flex flex-col gap-4 items-end">
-                                <a className="text-2xl font-sans">
+                                <ScrollLink 
+                                    className="text-2xl font-sans cursor-pointer"
+                                    to="About" smooth={ true } duration={ 800 } offset={ -100 }
+                                >
                                     About Me
-                                </a>
-                                <a className="text-2xl font-sans">
+                                </ScrollLink>
+
+                                <ScrollLink 
+                                    className="text-2xl font-sans cursor-pointer"
+                                    to="Experience" smooth={ true } duration={ 800 } offset={ -100 }
+                                >
                                     Experience
-                                </a>
-                                <a className="text-2xl font-sans">
+                                </ScrollLink>
+
+                                <ScrollLink 
+                                    className="text-2xl font-sans cursor-pointer"
+                                    to="Projects" smooth={ true } duration={ 800 } offset={ -100 }
+                                >
                                     Projects
-                                </a>
+                                </ScrollLink>
                             </div>
                         )}
                     </div>
                 ) : (
                     <div className="flex gap-4">
-                        <a className="text-2xl font-sans">
+                        <ScrollLink 
+                            className="text-2xl font-sans cursor-pointer"
+                            to="About" smooth={ true } duration={ 800 } offset={ -100 }
+                        >
                             About Me
-                        </a>
-                        <a className="text-2xl font-sans">
+                        </ScrollLink>
+
+                        <ScrollLink 
+                            className="text-2xl font-sans cursor-pointer"
+                            to="Experience" smooth={ true } duration={ 800 } offset={ -100 }
+                        >
                             Experience
-                        </a>
-                        <a className="text-2xl font-sans">
+                        </ScrollLink>
+
+                        <ScrollLink 
+                            className="text-2xl font-sans cursor-pointer"
+                            to="Projects" smooth={ true } duration={ 800 } offset={ -100 }
+                        >
                             Projects
-                        </a>
+                        </ScrollLink>
                     </div>
                 ) }
             </div>
