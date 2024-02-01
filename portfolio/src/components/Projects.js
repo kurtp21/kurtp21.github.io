@@ -12,7 +12,7 @@ const Projects = () => {
                 Projects
             </h1>
 
-            <div className="grid grid-cols-3 gap-5 place-items-center">
+            <div className="grid grid-cols-3 gap-5 items-stretch place-items-center">
                 <div className="flex flex-col w-5/6 gap-8 py-10 px-8 items-center justify-center bg-gray-100 shadow-lg drop-shadow-lg">
                     <img 
                         className="object-scale-down w-[300px] h-min shadow-inner"

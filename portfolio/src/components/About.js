@@ -10,7 +10,7 @@ const About = () => {
 
                 <p className="text-2xl font-poppins">
                     I am currently im my thrid-year of a four year Bachelors of Science majoring in Computer Science at the University of Saskatchewan.
-                    I joined the university's Computer Science Student Society, where I was elected to be a the Banquet Director. I like to spen my 
+                    I joined the university&apos;s Computer Science Student Society, where I was elected to be a the Banquet Director. I like to spen my 
                     free time cooking, studying for my courses, or coding a side project (which I picked up recently). I also like to be active 
                     going to the gym five times a a week, to keep my physical and mental healthy.
                 </p>

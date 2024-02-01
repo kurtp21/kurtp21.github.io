@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Link as ScrollLink } from 'react-scroll';
 
 import Logo from "./resources/favicon.png";
@@ -8,6 +8,8 @@ import { IoCloseSharp } from "react-icons/io5";
 
 const Header = ({ width }) => {
     const [ menuVisible, setMenuVisible ] = useState(false);
+
+    const { w } = width;
 
     const toggleMenu = () => {
         setMenuVisible(!menuVisible);
@@ -34,7 +36,7 @@ const Header = ({ width }) => {
                     </h1>
                 </ScrollLink>
 
-                { width < 1025 ? (
+                { w < 1025 ? (
                     <div className="flex flex-col gap-4 items-end"
                         onMouseLeave={ handleMouseLeave }
                     >

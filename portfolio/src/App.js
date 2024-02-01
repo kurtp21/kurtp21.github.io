@@ -34,7 +34,7 @@ useEffect(() => {
   return (
     <div className='flex flex-col justify-between min-w-screen min-h-screen scrollbar-hide'>
       <Header width={ windowSize.width } />
-      <div className="min-w-screen min-h-screen mx-20">
+      <div className="min-w-screen min-h-screen mx-20 overflow-hidden">
         <Routes>
           <Route path="/" element={ <Home width={ windowSize.width } /> }/>
         </Routes>

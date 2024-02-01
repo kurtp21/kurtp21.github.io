@@ -24,16 +24,16 @@ const Carousel = () => {
     ];
 
     return (
-        <div className="flex flex-wrap gap-6 items-center justify-center w-full px-10 py-5">
-            <img className="object-scale-down w-1/12 h-2/12 z-0" src={ Python } />
-            <img className="object-scale-down w-1/12 h-2/12 z-0" src={ Java } />
-            <img className="object-scale-down w-1/12 h-2/12 z-0" src={ C } />
-            <img className="object-scale-down w-1/12 h-2/12 z-0" src={ JavaScript } />
-            <img className="object-scale-down w-1/12 h-2/12 z-0" src={ HTML } />
-            <img className="object-scale-down w-1/12 h-2/12 z-0" src={ CSS } />
-            <img className="object-scale-down w-1/12 h-2/12 z-0" src={ react } />
-            <img className="object-scale-down w-3/12 h-2/12 z-0" src={ Tailwind } />
-            <img className="object-scale-down w-2/12 h-1/12 z-0" src={ MySQL } />
+        <div className="grid grid-cols-3 place-items-center items-stretch w-full gap-8">
+            <img className="object-scale-down w-[250px] z-0" src={ Python } />
+            <img className="object-scale-down w-[250px] z-0" src={ Java } />
+            <img className="object-scale-down w-[250px] z-0" src={ C } />
+            <img className="object-scale-down w-[250px] z-0" src={ JavaScript } />
+            <img className="object-scale-down w-[250px] z-0" src={ HTML } />
+            <img className="object-scale-down w-[250px] z-0" src={ CSS } />
+            <img className="object-scale-down w-[250px] z-0" src={ react } />
+            <img className="object-scale-down w-[250px] z-0" src={ Tailwind } />
+            <img className="object-scale-down w-[250px] z-0" src={ MySQL } />
         </div>
     );
 };

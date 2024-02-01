@@ -3,7 +3,7 @@ import { TypeAnimation } from "react-type-animation";
 import { Link } from "react-router-dom";
 
 import Headshot from "./resources/Headshots.jpg";
-import Resume from './resources/Resume.pdf';
+import Resume from './resources/kurt-pagal-resume.pdf';
 
 import { FaLinkedin } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
@@ -21,7 +21,7 @@ const Home = ({ width }) => {
         const link = document.createElement("a");
 
         link.href = Resume;
-        link.download = "Resume.pdf";
+        link.download = "kurt-pagal-resume.pdf";
 
         document.body.appendChild(link);
         link.click();
@@ -33,24 +33,38 @@ const Home = ({ width }) => {
         <>
             <div className="flex flex-col gap-56 items-center py-10" >
                 {/* Hero Section */}
-                <div className="flex flex-col w-full lg:flex-row items-center lg:justify-center gap-20 px-10 py-5" id="Home">
+                <div className="flex flex-col w-full lg:flex-row items-center justify-center gap-10 lg:gap-20 lg:px-10 lg:py-5" id="Home">
                     <img 
-                        className="object-scale-down w-4/12 h-5/12 z-0 rounded-3xl drop-shadow-2xl shadow-2xl"
+                        className="object-cover items-stretch w-full h-full lg:w-[550px] lg:h-[650px] z-0 rounded-xl drop-shadow-md shadow-md lg:drop-shadow-2xl lg:shadow-2xl"
                         src={ Headshot } alt="Logo"
                     />
                     
-                    <div className="flex flex-col items-start justify-center gap-20 w-full max-w-3xl">
-                        <div className="flex items-center gap-4 w-full">
-                            <h1 className="text-7xl underline underline-offset-8 font-barlow font-bold tracking-wide drop-shadow-2xl">
-                                Hello I'm
-                            </h1>
-                            
-                            <TypeAnimation 
-                                sequence={["Kurt Pagal", 2000, "A Developer", 2000, "A Thinker", 2000, "Ambitious", 2000]}
-                                speed={50}
-                                repeat={Infinity}
-                                className="text-7xl font-barlow font-extrabold tracking-wide drop-shadow-2xl"
-                            />
+                    <div className="flex flex-col items-center justify-center gap-10 lg:gap-20 w-full max-w-3xl">
+                        <div className="flex flex-col lg:flex-row items-start lg:items-center gap-4 w-full">
+                            {width < 1030 ? (
+                                <div className="flex flex-col gap-0">
+                                    <h1 className="text-[65px] sm:text-7xl underline underline-offset-8 font-barlow font-bold tracking-wide drop-shadow-2xl">
+                                        Hello I'm <br></br>
+                                    </h1>
+
+                                    <h1 className="text-[55px] sm:text-7xl font-barlow font-bold tracking-wide drop-shadow-2xl">
+                                        Kurt Pagal
+                                    </h1>
+                                </div>
+                            ) : (
+                                <>
+                                    <h1 className="text-7xl underline underline-offset-8 font-barlow font-bold tracking-wide drop-shadow-2xl">
+                                        Hello I'm
+                                    </h1>
+                                    
+                                    <TypeAnimation 
+                                        sequence={["Kurt Pagal", 2000, "A Developer", 2000, "A Thinker", 2000, "Ambitious", 2000]}
+                                        speed={50}
+                                        repeat={Infinity}
+                                        className={width < 550 ? (`text-5xl font-bold font-barlow drop-shadow-2xl`) : (`text-7xl font-extrabold font-barlow drop-shadow-2xl tracking-wide`)}
+                                    />
+                                </>
+                            )}
                         </div>
 
                         
@@ -59,9 +73,9 @@ const Home = ({ width }) => {
                                 Computer Science Student
                             </h1>
 
-                            <div className="flex gap-10 items-center justify-between">
+                            <div className="flex gap-10 items-center justify-start">
                                 <button 
-                                    className="rounded-xl py-2 px-4 bg-gray-200 shadow-lg drop-shadow-lg active:shadow-none active:drop-shadow-none active:bg-gray-100 text-2xl"
+                                    className="rounded-xl py-2 px-4 bg-gray-200 shadow-md drop-shadow-md lg:shadow-lg lg:drop-shadow-lg active:shadow-none active:drop-shadow-none active:bg-gray-100 text-2xl"
                                     onClick={ handleDownload }
                                 >
                                     Resume
@@ -80,9 +94,9 @@ const Home = ({ width }) => {
                         </div>
                     </div>
                 </div>
-
+                
                 <div className="flex flex-col gap-10">
-                    <div className="flex gap-20 items-start justify-between">
+                    <div className="flex flex-col lg:flex-row gap-10 lg:gap-20 items-start justify-between">
                         <About/>
                         <Experience />
                     </div>
