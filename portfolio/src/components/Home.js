@@ -45,7 +45,7 @@ const Home = ({ width }) => {
                             {width < 1030 ? (
                                 <div className="flex flex-col gap-0">
                                     <h1 className="text-[65px] sm:text-7xl underline underline-offset-8 font-barlow font-bold tracking-wide drop-shadow-2xl">
-                                        Hello I&appos;m <br></br>
+                                        Hello I&apos;m <br></br>
                                     </h1>
 
                                     <h1 className="text-[55px] sm:text-7xl font-barlow font-bold tracking-wide drop-shadow-2xl">
@@ -55,7 +55,7 @@ const Home = ({ width }) => {
                             ) : (
                                 <>
                                     <h1 className="text-7xl underline underline-offset-8 font-barlow font-bold tracking-wide drop-shadow-2xl">
-                                        Hello I&appos;m
+                                        Hello I&apos;m
                                     </h1>
                                     
                                     <TypeAnimation 
