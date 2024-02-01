@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { TypeAnimation } from "react-type-animation";
 import { Link } from "react-router-dom";
+import PropTypes from 'prop-types';
 
 import Headshot from "./resources/Headshots.jpg";
 import Resume from './resources/kurt-pagal-resume.pdf';
@@ -44,7 +45,7 @@ const Home = ({ width }) => {
                             {width < 1030 ? (
                                 <div className="flex flex-col gap-0">
                                     <h1 className="text-[65px] sm:text-7xl underline underline-offset-8 font-barlow font-bold tracking-wide drop-shadow-2xl">
-                                        Hello I'm <br></br>
+                                        Hello I&appos;m <br></br>
                                     </h1>
 
                                     <h1 className="text-[55px] sm:text-7xl font-barlow font-bold tracking-wide drop-shadow-2xl">
@@ -54,7 +55,7 @@ const Home = ({ width }) => {
                             ) : (
                                 <>
                                     <h1 className="text-7xl underline underline-offset-8 font-barlow font-bold tracking-wide drop-shadow-2xl">
-                                        Hello I'm
+                                        Hello I&appos;m
                                     </h1>
                                     
                                     <TypeAnimation 
@@ -108,6 +109,10 @@ const Home = ({ width }) => {
             </div>
         </>
     );
-}
+};
+
+Home.propTypes = {
+    width: PropTypes.number.isRequired,
+};
 
 export default Home;

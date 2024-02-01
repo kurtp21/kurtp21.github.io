@@ -11,17 +11,17 @@ import react from "./resources/React-icon.png";
 import MySQL from "./resources/Mysql.png";
 
 const Carousel = () => {
-    const images = [
-        Python,
-        Java,
-        C,
-        JavaScript,
-        HTML,
-        CSS,
-        Tailwind,
-        react,
-        MySQL,
-    ];
+    // const images = [
+    //     Python,
+    //     Java,
+    //     C,
+    //     JavaScript,
+    //     HTML,
+    //     CSS,
+    //     Tailwind,
+    //     react,
+    //     MySQL,
+    // ];
 
     return (
         <div className="grid grid-cols-3 place-items-center items-stretch w-full gap-8">
