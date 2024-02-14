@@ -24,17 +24,22 @@ const Carousel = () => {
     // ];
 
     return (
-        <div className="grid grid-cols-3 place-items-center items-stretch w-full gap-8">
-            <img className="object-scale-down w-[250px] z-0" src={ Python } />
-            <img className="object-scale-down w-[250px] z-0" src={ Java } />
-            <img className="object-scale-down w-[250px] z-0" src={ C } />
-            <img className="object-scale-down w-[250px] z-0" src={ JavaScript } />
-            <img className="object-scale-down w-[250px] z-0" src={ HTML } />
-            <img className="object-scale-down w-[250px] z-0" src={ CSS } />
-            <img className="object-scale-down w-[250px] z-0" src={ react } />
-            <img className="object-scale-down w-[250px] z-0" src={ Tailwind } />
-            <img className="object-scale-down w-[250px] z-0" src={ MySQL } />
-        </div>
+        // <div className="grid grid-cols-3 place-items-center items-stretch w-full gap-8">
+        <dvi className="flex flex-col items-center justify-start gap-8 w-full">
+            <div className="flex gap-10 overflow-x-auto bg-gray-100 px-5 py-15 w-full">
+                <img className="object-scale-down w-[150px] z-0" src={ Python } />
+                <img className="object-scale-down w-[150px] z-0" src={ Java } />
+                <img className="object-scale-down w-[150px] z-0" src={ C } />
+                <img className="object-scale-down w-[150px] z-0" src={ JavaScript } />
+                <img className="object-scale-down w-[150px] z-0" src={ HTML } />
+                <img className="object-scale-down w-[150px] z-0" src={ CSS } />
+                <img className="object-scale-down w-[150px] z-0" src={ react } />
+                <img className="object-scale-down w-[150px] z-0" src={ Tailwind } />
+                <img className="object-scale-down w-[150px] z-0" src={ MySQL } />
+            </div>
+            
+            <h3 className="font-poppins font-bolder text-2xl">Scroll to see more</h3>
+        </dvi>
     );
 };
 

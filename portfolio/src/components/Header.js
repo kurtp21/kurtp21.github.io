@@ -19,7 +19,7 @@ const Header = ({ width }) => {
     }
 
     return (
-        <nav className="sticky top-0 bg-white z-10">
+        <nav className="sticky top-0 bg-white z-10 opacity-95">
             <div className="flex items-start justify-between px-8 py-6 sm:px-10 sm:py-8">
                 <ScrollLink 
                     className='flex gap-2 items-center justify-left cursor-pointer'
@@ -51,21 +51,24 @@ const Header = ({ width }) => {
                             <div className="flex flex-col gap-4 items-end">
                                 <ScrollLink 
                                     className="text-2xl font-sans cursor-pointer"
-                                    to="About" smooth={ true } duration={ 800 } offset={ -100 }
+                                    to="About" smooth={ true } duration={ 800 } offset={ -230 }
+                                    onClick={ toggleMenu }
                                 >
                                     About Me
                                 </ScrollLink>
 
                                 <ScrollLink 
                                     className="text-2xl font-sans cursor-pointer"
-                                    to="Experience" smooth={ true } duration={ 800 } offset={ -100 }
+                                    to="Experience" smooth={ true } duration={ 800 } offset={ -230 }
+                                    onClick={ toggleMenu }
                                 >
                                     Experience
                                 </ScrollLink>
 
                                 <ScrollLink 
                                     className="text-2xl font-sans cursor-pointer"
-                                    to="Projects" smooth={ true } duration={ 800 } offset={ -100 }
+                                    to="Projects" smooth={ true } duration={ 800 } offset={ -230 }
+                                    onClick={ toggleMenu }
                                 >
                                     Projects
                                 </ScrollLink>

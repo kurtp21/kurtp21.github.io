@@ -32,29 +32,29 @@ const Home = ({ width }) => {
 
     return (
         <>
-            <div className="flex flex-col gap-56 items-center py-10" >
+            <div className="flex flex-col gap-56 items-center py-10 w-full" >
                 {/* Hero Section */}
                 <div className="flex flex-col w-full lg:flex-row items-center justify-center gap-10 lg:gap-20 lg:px-10 lg:py-5" id="Home">
                     <img 
-                        className="object-cover items-stretch w-full h-full lg:w-[550px] lg:h-[650px] z-0 rounded-xl drop-shadow-md shadow-md lg:drop-shadow-2xl lg:shadow-2xl"
+                        className="object-cover items-stretch w-full h-full md:w-[250px] md:h-[350px] lg:w-[550px] lg:h-[650px] z-0 rounded-xl drop-shadow-md shadow-md lg:drop-shadow-2xl lg:shadow-2xl"
                         src={ Headshot } alt="Logo"
                     />
                     
-                    <div className="flex flex-col items-center justify-center gap-10 lg:gap-20 w-full max-w-3xl">
-                        <div className="flex flex-col lg:flex-row items-start lg:items-center gap-4 w-full">
-                            {width < 1030 ? (
-                                <div className="flex flex-col gap-0">
-                                    <h1 className="text-[65px] sm:text-7xl underline underline-offset-8 font-barlow font-bold tracking-wide drop-shadow-2xl">
+                    <div className="flex flex-col items-start justify-center gap-10 lg:gap-20 w-full max-w-3xl">
+                        <div className="flex flex-col gap-4 w-full">
+                            {width < 1150 ? (
+                                <div className="flex flex-col gap-0 lg:gap-5">
+                                    <h1 className="text-[65px] md:text-5xl lg:text-7xl underline underline-offset-8 font-barlow font-bold tracking-wide drop-shadow-2xl">
                                         Hello I&apos;m <br></br>
                                     </h1>
 
-                                    <h1 className="text-[55px] sm:text-7xl font-barlow font-bold tracking-wide drop-shadow-2xl">
+                                    <h1 className="text-[55px] md:text-5xl lg:text-7xl font-barlow font-bold tracking-wide drop-shadow-2xl">
                                         Kurt Pagal
                                     </h1>
                                 </div>
                             ) : (
                                 <>
-                                    <h1 className="text-7xl underline underline-offset-8 font-barlow font-bold tracking-wide drop-shadow-2xl">
+                                    <h1 className="text-4xl lg:text-7xl underline underline-offset-8 font-barlow font-bold tracking-wide drop-shadow-2xl">
                                         Hello I&apos;m
                                     </h1>
                                     
@@ -62,14 +62,14 @@ const Home = ({ width }) => {
                                         sequence={["Kurt Pagal", 2000, "A Developer", 2000, "A Thinker", 2000, "Ambitious", 2000]}
                                         speed={50}
                                         repeat={Infinity}
-                                        className={width < 550 ? (`text-5xl font-bold font-barlow drop-shadow-2xl`) : (`text-7xl font-extrabold font-barlow drop-shadow-2xl tracking-wide`)}
+                                        className="text-4xl lg:text-7xl font-extrabold font-barlow drop-shadow-2xl tracking-wide"
                                     />
                                 </>
                             )}
                         </div>
 
                         
-                        <div className="flex flex-col gap-3">
+                        <div className="flex flex-col gap-3 w-full">
                             <h1 className="text-4xl font-poppins font-light">
                                 Computer Science Student
                             </h1>
@@ -96,7 +96,7 @@ const Home = ({ width }) => {
                     </div>
                 </div>
                 
-                <div className="flex flex-col gap-10">
+                <div className="flex flex-col gap-10 w-full">
                     <div className="flex flex-col lg:flex-row gap-10 lg:gap-20 items-start justify-between">
                         <About/>
                         <Experience />
