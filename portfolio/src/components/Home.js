@@ -96,7 +96,7 @@ const Home = ({ width }) => {
                     </div>
                 </div>
                 
-                <div className="flex flex-col gap-10 w-full">
+                <div className="flex flex-col gap-20 w-full">
                     <div className="flex flex-col lg:flex-row gap-10 lg:gap-20 items-start justify-between">
                         <About/>
                         <Experience />

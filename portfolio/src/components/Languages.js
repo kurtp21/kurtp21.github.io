@@ -26,7 +26,7 @@ const Carousel = () => {
     return (
         // <div className="grid grid-cols-3 place-items-center items-stretch w-full gap-8">
         <dvi className="flex flex-col items-center justify-start gap-8 w-full">
-            <div className="flex gap-10 overflow-x-auto bg-gray-100 px-5 py-15 w-full">
+            <div className="flex gap-20 overflow-x-auto px-10 py-15 w-full">
                 <img className="object-scale-down w-[150px] z-0" src={ Python } />
                 <img className="object-scale-down w-[150px] z-0" src={ Java } />
                 <img className="object-scale-down w-[150px] z-0" src={ C } />

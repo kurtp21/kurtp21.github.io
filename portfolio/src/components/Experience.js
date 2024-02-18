@@ -8,12 +8,24 @@ const About = () => {
                     Experience
                 </h1>
 
-                <p className="text-xl md:text-2xl indent-4 text-left font-poppins">
-                    I have worked two part-time jobs where I learned the importance of time management and how to 
-                    balance my work and student life. Through taking an Intemediate Software Engineering course in 
-                    my third year. As part of the course, I led a team of six in developing an e-commerce website 
-                    for our term project. I managed my team effectively, ensuring that tasks were delegated 
-                    appropriately, resulting in our team meeting our monthly deliverables consistently.
+                <p className="text-xl md:text-2xl text-left font-poppins">
+                    <ul className="list-disc">
+                        <li className="mb-2">
+                            I have worked two part-time jobs Pristine Carwash and A&W. It tought me the importance of time management 
+                            and how to balance my work and student life.
+                        </li>
+
+                        <li className="mb-2">
+                            I led a small group of six people to develop a small e-commerce website for a small family business, As
+                            part of my Intermediate Software Engineering course project. 
+                        </li>
+
+                        <li>
+                            Currently a part of the Computer Science Student Society executive team, as the Banqueat Director. I help 
+                            out in events planed for the computer sciecne students and also in charge of planning the graduation banquet
+                            for the computer science grads of 2024. 
+                        </li>
+                    </ul>
                 </p>
             </div>
         </>

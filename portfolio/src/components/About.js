@@ -8,11 +8,11 @@ const About = () => {
                     About Me
                 </h1>
 
-                <p className="text-xl md:text-2xl indent-4 text-left font-poppins">
-                    I am currently im my thrid-year of a four year Bachelors of Science majoring in Computer Science at the University of Saskatchewan.
-                    I joined the university&apos;s Computer Science Student Society, where I was elected to be a the Banquet Director. I like to spen my 
-                    free time cooking, studying for my courses, or coding a side project (which I picked up recently). I also like to be active 
-                    going to the gym five times a a week, to keep my physical and mental healthy.
+                <p className="text-xl md:text-2xl text-left font-poppins">
+                    I am currently im my thrid-year of a four year Bachelors of Science, majoring in Computer Science at the University of Saskatchewan.
+                    I joined the university&apos;s Computer Science Student Society, where I was elected to be the Banquet Director. I like to spend my 
+                    free time cooking, studying for my courses, or coding a side project (which I picked up recently). I also like to be active by
+                    going to the gym five times a week, to keep my physical and mental states healthy.
                 </p>
             </div>
         </>
